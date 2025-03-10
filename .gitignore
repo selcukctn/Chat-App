@@ -1,0 +1,48 @@
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# Editor files
+frontend/.vscode/
+frontend/.idea/
+frontend/.DS_Store
+
+# Misc
+frontend/*.log
+frontend/*.bak
+frontend/*.swp
+
+backend/node_modules/
+backend/dist/
+backend/.env
+backend/.env.local
+backend/.env.development.local
+backend/.env.test.local
+backend/.env.production.local
+
+# Logs
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/pnpm-debug.log*
+
+# Editor files
+backend/.vscode/
+backend/.idea/
+backend/.DS_Store
+
+# Misc
+backend/*.log
+backend/*.bak
+backend/*.swp
