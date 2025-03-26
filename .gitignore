@@ -8,6 +8,7 @@ frontend/.env.test.local
 frontend/.env.production.local
 
 # Logs
+frontend/.env
 frontend/npm-debug.log*
 frontend/yarn-debug.log*
 frontend/yarn-error.log*

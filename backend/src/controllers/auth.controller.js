@@ -1,11 +1,13 @@
 import bcrypt from 'bcryptjs';
 import User from '../models/user.model.js';
-import bycript from 'bcryptjs';
 import { generateToken } from '../lib/utils.js';
 
 export const signup = async (req, res) => {
     const {fullName, email, password} = req.body;
     try {
+        if(!fullName || !email || !password){
+            return res.status(400).json({message:"All fields required!!"})
+        }
         if(password.lenght < 6){
             return res.status(400).json({message:"Password must be at least 6 characters"})
         }
@@ -15,8 +17,8 @@ export const signup = async (req, res) => {
             return res.status(400).json({message:"Email already exist"})
         }
 
-        const salt = bcrypt.genSalt(10);
-        const hashedPassword = bycript.hash(password,salt);
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(password, salt);
 
         const newUser = new User({
             email:email,
